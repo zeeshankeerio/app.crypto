@@ -5,7 +5,7 @@ import pandas as pd
 import tempfile
 
 import base64
-import ta
+
 
 st.set_page_config(page_icon="📈", page_title="Crypto Dashboard")
 
@@ -164,23 +164,23 @@ data['price_change_24h'] = data['price_change_24h'].astype(float).round(2)
 data['price_change_percentage_24h'] = data['price_change_percentage_24h'].astype(float).round(2)
 
 # Add the 50-day and 200-day moving average indicators to the dataframe
-data['ma50'] = ta.trend.sma_indicator(data['current_price'], window=50)
-data['ma200'] = ta.trend.sma_indicator(data['current_price'], window=200)
+#data['ma50'] = ta.trend.sma_indicator(data['current_price'], window=50)
+#data['ma200'] = ta.trend.sma_indicator(data['current_price'], window=200)
 
 # Format the data
-data['ma50'] = data['ma50'].astype(float).round(2)
-data['ma200'] = data['ma200'].astype(float).round(2)
+#data['ma50'] = data['ma50'].astype(float).round(2)
+#data['ma200'] = data['ma200'].astype(float).round(2)
 
 
 
 
 # Add the RSI indicator to the dataframe
-data['rsi'] = ta.momentum.RSIIndicator(data['current_price'], window=14).rsi()
+#data['rsi'] = ta.momentum.RSIIndicator(data['current_price'], window=14).rsi()
 
 # Format the data
-data['ma50'] = data['ma50'].astype(float).round(2)
-data['ma200'] = data['ma200'].astype(float).round(2)
-data['rsi'] = data['rsi'].astype(float).round(2)
+#data['ma50'] = data['ma50'].astype(float).round(2)
+#data['ma200'] = data['ma200'].astype(float).round(2)
+#data['rsi'] = data['rsi'].astype(float).round(2)
 
 
 # Display the data in a table
